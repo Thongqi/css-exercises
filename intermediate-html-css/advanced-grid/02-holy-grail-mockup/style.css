@@ -90,7 +90,7 @@
   font-weight: normal;
 }
 
-
+----
 .container{
   display:grid;
   grid-template-columns: 1fr 4fr;
@@ -99,15 +99,30 @@
 
 .menu ul, .nav ul, .sidebar, .article{
   display:grid;
+  list-style-type: none;
+}
+
+.menu ul{
+  grid-template-columns: repeat(4, 1fr);
+  
+}
+
+
+.nav ul{
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .header, .footer {
   grid-column: 1/-1;
 }
 
+.header {
+  grid-template-columns: 2fr 1fr;
+}
+
 .sidebar {
   gap: 50px;
-  justify-content:center;
+  justify-content:stretch;
 }
 .sidecontent {
   text-align:center;
