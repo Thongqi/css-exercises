@@ -12,6 +12,7 @@ html {
   display:grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr min(5fr, auto) 1fr;
+  gap:15px;
 }
 
 .container div {
