@@ -89,3 +89,35 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+.container{
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+
+.menu ul, .nav ul, .sidebar, .article{
+  display:grid;
+}
+
+.header, .footer {
+  grid-columns: 1/-1;
+}
+
+.sidebar {
+  gap: 50px;
+  justify-content:center;
+}
+.sidecontent {
+  text-align:center;
+}
+
+.article {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.article .card{
+  height: 200px;
+}
