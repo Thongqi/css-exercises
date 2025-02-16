@@ -123,6 +123,7 @@
 .sidebar {
   gap: 50px;
   justify-content:stretch;
+  grid-row: 2/4;
 }
 .sidecontent {
   text-align:center;
