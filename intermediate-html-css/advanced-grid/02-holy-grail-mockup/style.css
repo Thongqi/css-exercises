@@ -7,7 +7,7 @@
   text-align: center;
     display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr 5fr 1fr;
+  grid-template-rows: 1fr 1fr autofit 1fr;
   gap: 4px;
 }
 
