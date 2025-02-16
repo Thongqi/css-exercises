@@ -5,7 +5,10 @@
 
 .container {
   text-align: center;
-  display:grid;
+    display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
+  gap: 4px;
 }
 
 .container div {
@@ -91,13 +94,8 @@
   font-weight: normal;
 }
 
-----
-.container{
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr 5fr 1fr;
-  gap: 4px;
-}
+
+
 
 .menu ul, .nav ul, .sidebar, .article{
   display:grid;
