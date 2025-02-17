@@ -13,7 +13,16 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <style>
+        :root {
+            --scd-color: #136f63;
+            --ttr-color: #e0ca3c;
+        }
+        body{
+            box-sizing: border-box;
+            background-color: #000F08;
+            color: white;
 
+        }
         ul li{
             list-style-type: none;
         }
@@ -63,6 +72,8 @@
 
         .search input {
             border: 1px solid grey;
+            border-radius: 50%;
+            
         }
 
         .username {
@@ -73,6 +84,8 @@
         .buttons button {
             text-align: center;
             padding: 2px 5px;
+            border-radius: 50%;
+            background-color: var(--scd-color);
         }
 
         .main {
@@ -88,6 +101,12 @@
 
         .facts{
             grid-row: 1/-1;
+            grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+            
+        }
+
+        .facts .cards {
+            background-color: var(--ttr-color);
         }
 
     </style>
@@ -95,10 +114,10 @@
     
 </head>
 <body>
-    <div class="container grid">
+    <div class="container grid gap-4">
         <div class="header">
             <div class="search flex justify-between">
-                <div>
+                <div class="grow-2"> 
                     <i class="bi bi-search"></i>
                     <input type="search w-full px-2 rounded-full">
                 </div>
@@ -110,11 +129,11 @@
                 
             </div>
 
-            <div class="user-info justify-between column-span-full">
+            <div class="user-info justify-between col-span-full flex">
                 <div class="username grid items-end justify-start">
                     <img src="profile.jpg" alt="Squirel" class="row-span-full h-[60px] w-[60px]" >
                     <p>Hi, there</p>
-                    <p class="text-3xl font-bold column-span-full">ThongQi</p>
+                    <p class="text-3xl font-bold col-span-full">ThongQi</p>
                 </div>
                 <div class="buttons flex">
                     <button>New</button>
@@ -130,7 +149,7 @@
                 <i class="bi bi-nut-fill"></i>
                 <span>Dashboard</span>
             </div>
-            <ul>
+            <ul class="my-4">
                 <li><i class="bi bi-house-door"></i>Home</li>
                 <li><i class="bi bi-person-lines-fill"></i>Profile</li>
                 <li><i class="bi bi-chat"></i>Messages</li>
@@ -146,10 +165,21 @@
 
         </div>
 
-        <div class="main">
+        <div class="main gap-4">
             
-            <div class="facts">
-                <h2>Posted Facts</h2>
+            <div class="facts grid">
+                <h2 class="col-span-full">Posted Facts</h2>
+                
+                <div class="card">
+                    <h3>Bananas are berries, but strawberries aren’t.</h3>
+                    <p>Botanically, bananas fit the definition of berries, while strawberries do not!</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
                 <div class="card">
                     <h3>Bananas are berries, but strawberries aren’t.</h3>
                     <p>Botanically, bananas fit the definition of berries, while strawberries do not!</p>
