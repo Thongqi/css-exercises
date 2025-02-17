@@ -28,6 +28,10 @@
             padding-bottom: 1rem;
         }
 
+        li:hover {
+            background-color: #3f5048;
+        }
+
         h2 {
             font-size: 1.1rem;
             font-weight: 600;
@@ -65,6 +69,9 @@
             object-fit: cover;
         }
 
+        button:hover, a:hover{
+            scale: 1.05;
+        }
 
 
         .header {
@@ -94,7 +101,7 @@
 
         .buttons button {
             text-align: center;
-            padding: 2px 5px;
+            padding: 2px 8px;
             border-radius: 10px;
             background-color: var(--scd-color);
         }
@@ -104,7 +111,7 @@
             grid-template-columns: 2fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-column: 2/-1;
-            background-color: var(--ttr-color);
+            
         }
 
         .main .most-liked {
@@ -113,16 +120,17 @@
 
         .facts{
             grid-row: 1/-1;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
 
                     
         }
 
         .facts .card {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
             border: 1px solid salmon;
             padding: 0.5rem;
             border-radius: 5px;
             text-align: justify;
+            background-color: var(--ttr-color);
         }
 
 
@@ -131,14 +139,14 @@
     
 </head>
 <body>
-    <div class="container grid gap-4">
+    <div class="container grid gap-4 mt-6">
         <div class="header">
             <div class="search flex justify-between">
                 <div class="grow-2"> 
                     <i class="bi bi-search"></i>
                     <input type="search w-4/5 px-2 rounded-full">
                 </div>
-                <div class="flex gap-4">
+                <div class="flex gap-4 items-center">
                     <i class="bi bi-bell"></i>
                     <img src="profile.jpg" alt="Squirel" class="h-[25px]">
                     <p class="text-lg font-bold">ThongQi</p>
@@ -147,8 +155,8 @@
             </div>
 
             <div class="user-info justify-between col-span-full flex">
-                <div class="username grid items-end justify-start">
-                    <img src="profile.jpg" alt="Squirel" class="row-span-full h-[60px] w-[60px]" >
+                <div class="username grid items-center justify-start">
+                    <img src="profile.jpg" alt="Squirel" class="row-span-full h-[65px] w-[65px]" >
                     <p>Hi, there</p>
                     <p class="text-3xl font-bold">ThongQi</p>
                 </div>
@@ -167,17 +175,17 @@
                 <span>Dashboard</span>
             </div>
             <ul class="my-4">
-                <li><i class="bi bi-house-door"></i>Home</li>
-                <li><i class="bi bi-person-lines-fill"></i>Profile</li>
-                <li><i class="bi bi-chat"></i>Messages</li>
-                <li><i class="bi bi-hourglass"></i>History</li>
-                <li><i class="bi bi-list-task"></i>Task</li>
-                <li><i class="bi bi-people-fill"></i>Communities</li>
+                <li><a href=""><i class="bi bi-house-door"></i>Home</a></li>
+                <li><a href=""><i class="bi bi-person-lines-fill"></i>Profile</a></li>
+                <li><a href=""><i class="bi bi-chat"></i>Messages</a></li>
+                <li><a href=""><i class="bi bi-hourglass"></i>History</a></li>
+                <li><a href=""><i class="bi bi-list-task"></i>Task</a></li>
+                <li><a href=""><i class="bi bi-people-fill"></i>Communities</a></li>
             </ul>
             <ul>
-                <li><i class="bi bi-gear"></i>Settings</li>
-                <li><i class="bi bi-question-octagon"></i>Support</li>
-                <li><i class="bi bi-shield-lock"></i>Privacy</li>
+                <li><a href=""><i class="bi bi-gear"></i>Settings</a></li>
+                <li><a href=""><i class="bi bi-question-octagon"></i>Support</a></li>
+                <li><a href=""><i class="bi bi-shield-lock"></i>Privacy</a></li>
             </ul>
 
         </div>
@@ -185,7 +193,7 @@
         <div class="main gap-4">
             
             <div class="facts grid gap-3">
-                <h2 class="col-span-full">Posted Facts</h2>
+                <h2 class="col-span-full">Daily Facts</h2>
                 
                 <div class="card">
                     <h3>Bananas are berries, but strawberries aren’t.</h3>
