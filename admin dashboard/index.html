@@ -15,7 +15,7 @@
     <style>
         :root {
             --scd-color: #136f63;
-            --ttr-color: #e0ca3c;
+            --ttr-color: #edcb34;
         }
         body{
             box-sizing: border-box;
@@ -94,6 +94,10 @@
             
         }
 
+        .search input:focus{
+            background-color: #83948cc5;
+        }
+
         .username {
             grid-template-columns: 1fr 2fr;
             grid-template-rows: repeat(2, 1fr);
@@ -134,6 +138,10 @@
             height: fit-content;
         }
 
+        .most-liked .card, .busted .card {
+            padding-bottom: 0.5rem;
+        }
+
 
     </style>
 
@@ -145,9 +153,9 @@
             <div class="search flex justify-between">
                 <div class="grow-2"> 
                     <i class="bi bi-search"></i>
-                    <input type="search w-4/5 px-2 rounded-full">
+                    <input type="search" class="w-4/5 px-2 rounded-full">
                 </div>
-                <div class="flex gap-4 items-center gap-x-4">
+                <div class="flex gap-4 items-center ">
                     <i class="bi bi-bell"></i>
                     <img src="profile.jpg" alt="Squirel" class="h-[25px]">
                     <p class="text-lg font-bold">ThongQi</p>
@@ -156,7 +164,7 @@
             </div>
 
             <div class="user-info justify-between col-span-full flex">
-                <div class="username grid items-center justify-start">
+                <div class="username grid items-center justify-start gap-x-4">
                     <img src="profile.jpg" alt="Squirel" class="row-span-full h-[65px] w-[65px]" >
                     <p>Hi, there</p>
                     <p class="text-3xl font-bold">ThongQi</p>
