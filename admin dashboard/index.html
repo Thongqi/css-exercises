@@ -121,7 +121,7 @@
         .facts{
             grid-row: 1/-1;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-
+            grid-auto-rows: max-content;
                     
         }
 
@@ -131,6 +131,7 @@
             border-radius: 5px;
             text-align: justify;
             background-color: var(--ttr-color);
+            height: fit-content;
         }
 
 
@@ -146,7 +147,7 @@
                     <i class="bi bi-search"></i>
                     <input type="search w-4/5 px-2 rounded-full">
                 </div>
-                <div class="flex gap-4 items-center">
+                <div class="flex gap-4 items-center gap-x-4">
                     <i class="bi bi-bell"></i>
                     <img src="profile.jpg" alt="Squirel" class="h-[25px]">
                     <p class="text-lg font-bold">ThongQi</p>
@@ -206,8 +207,78 @@
                 </div>
 
                 <div class="card">
-                    <h3>Bananas are berries, but strawberries aren’t.</h3>
-                    <p>Botanically, bananas fit the definition of berries, while strawberries do not!</p>
+                    <h3>Honey never spoils.</h3>
+                    <p> Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Wombat poop is cube-shaped.</h3>
+                    <p>Wombats produce cube-shaped poop, which helps keep it from rolling away and marks their territory.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Sharks existed before trees.</h3>
+                    <p>Sharks have been around for over 400 million years, while trees evolved around 350 million years ago.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Octopuses have three hearts.</h3>
+                    <p>Two pump blood to the gills, while the third pumps it to the rest of the body. Interestingly, the heart that delivers blood to the body stops when the octopus swims, which is why they prefer crawling to swimming.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Cleopatra lived closer in time to the moon landing than to the construction of the Great Pyramid.</h3>
+                    <p>Cleopatra’s reign in Egypt was around 2,000 years after the Great Pyramid of Giza was built, and only about 2,000 years before the first moon landing.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Sloths can hold their breath longer than dolphins.</h3>
+                    <p>Sloths can hold their breath for up to 40 minutes, while dolphins can only manage around 10 minutes.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>The shortest war in history lasted only 38 to 45 minutes..</h3>
+                    <p>The Anglo-Zanzibar War took place between the United Kingdom and the Sultanate of Zanzibar on August 27, 1896.</p>
+                    <div class="flex gap-4 justify-end">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-eye"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Pineapples were once so rare that they were rented out as status symbols.</h3>
+                    <p>In the 18th century, pineapples were extremely expensive in Europe, and wealthy people would rent them for parties to show off their wealth.</p>
                     <div class="flex gap-4 justify-end">
                         <i class="bi bi-star"></i>
                         <i class="bi bi-eye"></i>
@@ -219,12 +290,32 @@
             <div class="most-liked">
                 <h2>Most-liked</h2>
                 <div class="card overflow-x-hidden">
+                    A day on Venus is longer than a year on Venus.
+                </div>
+                <div class="card overflow-x-hidden">
                     Bananas are berries, but strawberries aren’t.
+                </div>
+                <div class="card overflow-x-hidden">
+                    Cows have best friends.
                 </div>
             </div>
 
             <div class="busted">
                 <h2>Busted</h2>
+                <div class="card overflow-x-hidden">
+                    <h3>We only use 10% of our brains.</h3>
+                    <p><strong>Busted:</strong>This is a common myth. In reality, we use nearly all parts of our brain, even when we're at rest. Brain imaging shows activity in every part of the brain, even while sleeping.</p>
+                </div>
+
+                <div class="card overflow-x-hidden">
+                    <h3>The Great Wall of China is visible from space.</h3>
+                    <p><strong>Busted:</strong>The Great Wall is not visible to the naked eye from space without aid. It's too narrow and blends in with the natural surroundings.</p>
+                </div>
+
+                <div class="card overflow-x-hidden">
+                    <h3>Goldfish have a 3-second memory span.</h3>
+                    <p><strong>Busted:</strong>Goldfish actually have a memory span of several months and can be trained to respond to cues and navigate mazes.</p>
+                </div>
             </div>
         </div>
     </div>
