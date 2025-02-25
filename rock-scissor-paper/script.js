@@ -32,5 +32,48 @@ var humanChoice = getHumanChoice().toLowerCase()
 var computerChoice = getComputerChoice()
 
 function playRound(){
+    if (humanChoice === 'rock'){
+        switch (computerChoice){
+            case 'paper':
+                log('You lose(´。＿。｀)')
+                computerScore++
+            case 'rock':
+                log('Is a tie👔')
+                computerScore++
+                humanScore++
+            case 'scissor':
+                log('You wonnnnnn(｡･∀･)ﾉﾞ')
+                humanScore++;
+        }
+    }
+    
+    elif (humanChoice === 'scissor'){
+        switch (computerChoice){
+            case 'paper':
+                log('You wonnnnnn(｡･∀･)ﾉﾞ')
+                humanScore++;
+            case 'rock':
+                log('You lose(´。＿。｀)')
+                computerScore++
+            case 'scissor':
+                log('Is a tie👔')
+                computerScore++
+                humanScore++
+        }
+    }
 
+    elif (humanChoice === 'paper') {
+        switch (computerChoice){
+            case 'paper':
+                log('Is a tie👔')
+                computerScore++
+                humanScore++
+            case 'rock':
+                log('You wonnnnnn(｡･∀･)ﾉﾞ')
+                humanScore++;
+            case 'scissor':
+                log('You lose(´。＿。｀)')
+                computerScore++
+        }
+    }
 }
