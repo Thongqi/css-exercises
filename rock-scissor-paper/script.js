@@ -14,6 +14,7 @@ function playGame(){
     let round = 0;
     while (round < 5){
         playRound()
+        round++;
     }
     
 }
