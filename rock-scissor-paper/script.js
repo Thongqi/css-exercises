@@ -47,7 +47,7 @@ function playRound(){
         }
     }
     
-    elif (humanChoice === 'scissor'){
+    else if (humanChoice === 'scissor'){
         switch (computerChoice){
             case 'paper':
                 log('You wonnnnnn(｡･∀･)ﾉﾞ')
@@ -62,7 +62,7 @@ function playRound(){
         }
     }
 
-    elif (humanChoice === 'paper') {
+    else if (humanChoice === 'paper') {
         switch (computerChoice){
             case 'paper':
                 log('Is a tie👔')
