@@ -5,15 +5,16 @@ log("Hello cat")
 var humanScore, computerScore;
 humanScore = computerScore = 0;
 
-var humanChoice = getHumanChoice().toLowerCase()
-var computerChoice = getComputerChoice()
 
 playGame()
 
 function playGame(){
     let round = 0;
     while (round < 5){
-        playRound()
+        var humanChoice = getHumanChoice().toLowerCase()
+        var computerChoice = getComputerChoice()
+
+        playRound(humanChoice, computerChoice)
         round++;
     }
     
@@ -46,7 +47,7 @@ function getHumanChoice(){
 
 
 
-function playRound(){
+function playRound(humanChoice, computerChoice){
     log(humanChoice, computerChoice)
     if (humanChoice === 'rock'){
         switch (computerChoice){
