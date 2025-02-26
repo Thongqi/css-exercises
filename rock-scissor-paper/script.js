@@ -19,10 +19,10 @@ function playGame(){
         round++;
     }
     if (humanScore > computerScore){
-        log('%cYOU WON!! (ToT)/~~~', 'font-size: 16px; font-weight: bold;')
+        log('%cYOU WON THE GAME!! (ToT)/~~~', 'font-size: 16px; font-weight: bold;')
     }
     else{
-        log('%cYOU LOSE....(；′⌒`)', 'font-size: 16px; font-weight: bold;')
+        log('%cYOU LOSE THE GAME....(；′⌒`)', 'font-size: 16px; font-weight: bold;')
     }
     
 }
