@@ -2,10 +2,11 @@ const log = console.log
 
 log("Hello cat")
 
-
+playRound()
 
 function getComputerChoice(){
     let x = Math.floor(Math.random() * 3)
+    log(x)
     switch (x) {
         case 0:
             return 'rock';
@@ -32,6 +33,7 @@ var humanChoice = getHumanChoice().toLowerCase()
 var computerChoice = getComputerChoice()
 
 function playRound(){
+    log(humanChoice, computerChoice)
     if (humanChoice === 'rock'){
         switch (computerChoice){
             case 'paper':
@@ -76,4 +78,5 @@ function playRound(){
                 computerScore++
         }
     }
+    log(humanScore,computerScore)
 }
