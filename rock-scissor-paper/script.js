@@ -3,15 +3,16 @@ const log = console.log
 log("Hello cat")
 
 var humanScore, computerScore;
-humanScore = computerScore = 0;
+
 
 
 playGame()
 
 function playGame(){
+    humanScore = computerScore = 0;
     let round = 0;
     while (round < 5){
-        var humanChoice = getHumanChoice().toLowerCase()
+        var humanChoice = getHumanChoice()
         var computerChoice = getComputerChoice()
 
         playRound(humanChoice, computerChoice)
@@ -49,8 +50,8 @@ function getComputerChoice(){
 
 function getHumanChoice(){
    
-    var ans = prompt("Rock? Scissor? Paper?:").toLowerCase()
-    if (ans != 'rock' || ans != 'scissor' || ans != 'paper'){
+    var ans = prompt("Rock? Scissor? Paper?:")
+    if (ans.toLowerCase() != 'rock' && ans.toLowerCase() != 'scissor' && ans.toLowerCase() != 'paper'){
         alert('Wrong input')
         getHumanChoice()
     }
@@ -66,14 +67,14 @@ function playRound(humanChoice, computerChoice){
     if (humanChoice === 'rock'){
         switch (computerChoice){
             case 'paper':
-                log('You lose(´。＿。｀)')
+                log('Computer: 🖐  You lose(´。＿。｀)')
                 computerScore++
                 break;
             case 'rock':
-                log('Is a tie👔')
+                log('Computer: ✊  Is a tie👔')
                 break;
             case 'scissor':
-                log('You wonnnnnn(｡･∀･)ﾉﾞ')
+                log('Computer: ✌ You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
                 break;
         }
@@ -82,15 +83,15 @@ function playRound(humanChoice, computerChoice){
     else if (humanChoice === 'scissor'){
         switch (computerChoice){
             case 'paper':
-                log('You wonnnnnn(｡･∀･)ﾉﾞ')
+                log('Computer: 🖐  You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
                 break;
             case 'rock':
-                log('You lose(´。＿。｀)')
+                log('Computer: ✊   You lose(´。＿。｀)')
                 computerScore++
                 break;
             case 'scissor':
-                log('Is a tie👔')
+                log('Computer: ✌  Is a tie👔')
                 break;
         }
     }
@@ -98,14 +99,14 @@ function playRound(humanChoice, computerChoice){
     else if (humanChoice === 'paper') {
         switch (computerChoice){
             case 'paper':
-                log('Is a tie👔')
+                log('Computer: 🖐  Is a tie👔')
                 break;
             case 'rock':
-                log('You wonnnnnn(｡･∀･)ﾉﾞ')
+                log('Computer: ✊   You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
                 break;
             case 'scissor':
-                log('You lose(´。＿。｀)')
+                log('Computer: ✌  You lose(´。＿。｀)')
                 computerScore++
                 break;
         }
