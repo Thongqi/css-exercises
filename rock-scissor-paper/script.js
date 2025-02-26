@@ -48,7 +48,15 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    return prompt("Rock? Scissor? Paper?:")
+   
+    var ans = prompt("Rock? Scissor? Paper?:").toLowerCase()
+    if (ans != 'rock' || ans != 'scissor' || ans != 'paper'){
+        alert('Wrong input')
+        getHumanChoice()
+    }
+    else {
+        return ans
+    }
 }
 
 
