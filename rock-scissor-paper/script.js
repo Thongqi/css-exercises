@@ -29,7 +29,7 @@ function playGame(){
 
 function getComputerChoice(){
     let x = Math.floor(Math.random() * 3)
-    log(x)
+    // log(x)
     switch (x) {
         case 0:
             return 'rock';
@@ -54,7 +54,7 @@ function getHumanChoice(){
 
 
 function playRound(humanChoice, computerChoice){
-    log(humanChoice, computerChoice)
+    // log(humanChoice, computerChoice)
     if (humanChoice === 'rock'){
         switch (computerChoice){
             case 'paper':
