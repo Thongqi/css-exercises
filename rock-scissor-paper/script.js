@@ -2,6 +2,12 @@ const log = console.log
 
 log("Hello cat")
 
+var humanScore, computerScore;
+humanScore = computerScore = 0;
+
+var humanChoice = getHumanChoice().toLowerCase()
+var computerChoice = getComputerChoice()
+
 playRound()
 
 function getComputerChoice(){
@@ -28,9 +34,7 @@ function getHumanChoice(){
     return prompt("Rock? Scissor? Paper?:")
 }
 
-var humanScore = computerScore = 0;
-var humanChoice = getHumanChoice().toLowerCase()
-var computerChoice = getComputerChoice()
+
 
 function playRound(){
     log(humanChoice, computerChoice)
@@ -78,5 +82,5 @@ function playRound(){
                 computerScore++
         }
     }
-    log(humanScore,computerScore)
+    log(humanScore, computerScore)
 }
