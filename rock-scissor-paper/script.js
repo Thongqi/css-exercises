@@ -8,7 +8,16 @@ humanScore = computerScore = 0;
 var humanChoice = getHumanChoice().toLowerCase()
 var computerChoice = getComputerChoice()
 
-playRound()
+playGame()
+
+function playGame(){
+    let round = 0;
+    while (round < 5){
+        playRound()
+    }
+    
+}
+
 
 function getComputerChoice(){
     let x = Math.floor(Math.random() * 3)
@@ -91,5 +100,5 @@ function playRound(){
                 break;
         }
     }
-    log(humanScore, computerScore)
+    log('You:' + humanScore, 'Computer:' + computerScore)
 }
