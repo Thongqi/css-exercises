@@ -17,6 +17,12 @@ function playGame(){
         playRound(humanChoice, computerChoice)
         round++;
     }
+    if (humanScore > computerScore){
+        log('%cYOU WON!! (ToT)/~~~', 'font-size: 16px; font-weight: bold;')
+    }
+    else{
+        log('%cYOU LOSE....(；′⌒`)', 'font-size: 16px; font-weight: bold;')
+    }
     
 }
 
@@ -57,8 +63,6 @@ function playRound(humanChoice, computerChoice){
                 break;
             case 'rock':
                 log('Is a tie👔')
-                computerScore++
-                humanScore++
                 break;
             case 'scissor':
                 log('You wonnnnnn(｡･∀･)ﾉﾞ')
@@ -79,8 +83,6 @@ function playRound(humanChoice, computerChoice){
                 break;
             case 'scissor':
                 log('Is a tie👔')
-                computerScore++
-                humanScore++
                 break;
         }
     }
@@ -89,8 +91,6 @@ function playRound(humanChoice, computerChoice){
         switch (computerChoice){
             case 'paper':
                 log('Is a tie👔')
-                computerScore++
-                humanScore++
                 break;
             case 'rock':
                 log('You wonnnnnn(｡･∀･)ﾉﾞ')
