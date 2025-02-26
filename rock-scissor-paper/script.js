@@ -43,13 +43,16 @@ function playRound(){
             case 'paper':
                 log('You lose(´。＿。｀)')
                 computerScore++
+                break;
             case 'rock':
                 log('Is a tie👔')
                 computerScore++
                 humanScore++
+                break;
             case 'scissor':
                 log('You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
+                break;
         }
     }
     
@@ -58,13 +61,16 @@ function playRound(){
             case 'paper':
                 log('You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
+                break;
             case 'rock':
                 log('You lose(´。＿。｀)')
                 computerScore++
+                break;
             case 'scissor':
                 log('Is a tie👔')
                 computerScore++
                 humanScore++
+                break;
         }
     }
 
@@ -74,12 +80,15 @@ function playRound(){
                 log('Is a tie👔')
                 computerScore++
                 humanScore++
+                break;
             case 'rock':
                 log('You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
+                break;
             case 'scissor':
                 log('You lose(´。＿。｀)')
                 computerScore++
+                break;
         }
     }
     log(humanScore, computerScore)
