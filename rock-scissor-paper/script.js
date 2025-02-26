@@ -5,8 +5,12 @@ log("Hello cat")
 var humanScore, computerScore;
 
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    playGame()
+}
 
-playGame()
+)
+
 
 function playGame(){
     humanScore = computerScore = 0;
