@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 function playGame(){
     humanScore = computerScore = 0;
 
-    var humanChoice = document.querySelector(".choices").addEventListener('click', getHumanChoice()) 
+    var humanChoice = document.querySelectorAll(".choices").forEach(item => {
+        item.addEventListener('click', getHumanChoice()) 
+    })
+    
     var computerChoice = getComputerChoice()
 
     playRound(humanChoice, computerChoice)
