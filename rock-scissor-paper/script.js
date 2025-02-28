@@ -3,35 +3,39 @@ const log = console.log
 log("Hello cat")
 
 var humanScore, computerScore;
+humanScore = computerScore = 0;
 
+    
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    playGame()
-}
 
-)
-
-
-function playGame(){
-    humanScore = computerScore = 0;
-
-    var humanChoice = document.querySelectorAll(".choices").forEach(item => {
-        item.addEventListener('click', getHumanChoice()) 
+    document.querySelectorAll(".choices").forEach(item => {
+        item.addEventListener('click', (event) => {
+            var humanChoice = getHumanChoice(e)
+            var computerChoice = getComputerChoice()
+            playRound(humanChoice, computerChoice)
+        }) 
     })
-    
-    var computerChoice = getComputerChoice()
 
-    playRound(humanChoice, computerChoice)
     var choices = {
         'rock': '✊', 
         'scissor': '✌',
         'paper': '🖐'
     }
+
     document.querySelector('#ur_choice').innerHTML = choices[humanChoice]
     document.querySelector('#comp_choice').innerHTML = choices[computerChoice]
     
     document.querySelector('#ur_score').innerHTML = humanScore
     document.querySelector('#comp_score').innerHTML = computerScore
+        
+    }
+)
+
+
+function playGame(){
+    
+    
     
 }
 
@@ -56,8 +60,8 @@ function getComputerChoice(){
     
 }
 
-function getHumanChoice(){
-    return this.getAttribute("data-choice")
+function getHumanChoice(e){
+    return e.target.getAttribute("data-choice")
 }
 
 
