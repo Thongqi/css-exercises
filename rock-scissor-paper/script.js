@@ -14,20 +14,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 function playGame(){
     humanScore = computerScore = 0;
-    let round = 0;
-    while (round < 5){
-        var humanChoice = getHumanChoice()
-        var computerChoice = getComputerChoice()
 
-        playRound(humanChoice, computerChoice)
-        round++;
+    var humanChoice = document.querySelector(".choices").addEventListener('click', getHumanChoice()) 
+    var computerChoice = getComputerChoice()
+
+    playRound(humanChoice, computerChoice)
+    var choices = {
+        'rock': '✊', 
+        'scissor': '✌',
+        'paper': '🖐'
     }
-    if (humanScore > computerScore){
-        log('%cYOU WON THE GAME!! (ToT)/~~~', 'font-size: 16px; font-weight: bold;')
-    }
-    else{
-        log('%cYOU LOSE THE GAME....(；′⌒`)', 'font-size: 16px; font-weight: bold;')
-    }
+    document.querySelector('#ur_choice').innerHTML = choices[humanChoice]
+    document.querySelector('#comp_choice').innerHTML = choices[computerChoice]
+    
+    document.querySelector('#ur_score').innerHTML = humanScore
+    document.querySelector('#comp_score').innerHTML = computerScore
     
 }
 
@@ -53,32 +54,26 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-   
-    var ans = prompt("Rock? Scissor? Paper?:")
-    if (ans.toLowerCase() != 'rock' && ans.toLowerCase() != 'scissor' && ans.toLowerCase() != 'paper'){
-        alert('Wrong input')
-        getHumanChoice()
-    }
-    else {
-        return ans
-    }
+    return this.getAttribute("data-choice")
 }
 
 
 
 function playRound(humanChoice, computerChoice){
     // log(humanChoice, computerChoice)
+    const result = document.querySelector('#result')
+
     if (humanChoice === 'rock'){
         switch (computerChoice){
             case 'paper':
-                log('Computer: 🖐  You lose(´。＿。｀)')
+                result.innerHTML('You lose(´。＿。｀)')
                 computerScore++
                 break;
             case 'rock':
-                log('Computer: ✊  Is a tie👔')
+                result.innerHTML('Computer: ✊  Is a tie👔')
                 break;
             case 'scissor':
-                log('Computer: ✌ You wonnnnnn(｡･∀･)ﾉﾞ')
+                result.innerHTML('Computer: ✌ You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
                 break;
         }
@@ -87,15 +82,15 @@ function playRound(humanChoice, computerChoice){
     else if (humanChoice === 'scissor'){
         switch (computerChoice){
             case 'paper':
-                log('Computer: 🖐  You wonnnnnn(｡･∀･)ﾉﾞ')
+                result.innerHTML('Computer: 🖐  You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
                 break;
             case 'rock':
-                log('Computer: ✊   You lose(´。＿。｀)')
+                result.innerHTML('Computer: ✊   You lose(´。＿。｀)')
                 computerScore++
                 break;
             case 'scissor':
-                log('Computer: ✌  Is a tie👔')
+                result.innerHTML('Computer: ✌  Is a tie👔')
                 break;
         }
     }
@@ -103,14 +98,14 @@ function playRound(humanChoice, computerChoice){
     else if (humanChoice === 'paper') {
         switch (computerChoice){
             case 'paper':
-                log('Computer: 🖐  Is a tie👔')
+                result.innerHTML('Computer: 🖐  Is a tie👔')
                 break;
             case 'rock':
-                log('Computer: ✊   You wonnnnnn(｡･∀･)ﾉﾞ')
+                result.innerHTML('Computer: ✊   You wonnnnnn(｡･∀･)ﾉﾞ')
                 humanScore++;
                 break;
             case 'scissor':
-                log('Computer: ✌  You lose(´。＿。｀)')
+                result.innerHTML('Computer: ✌  You lose(´。＿。｀)')
                 computerScore++
                 break;
         }
