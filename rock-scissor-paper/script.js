@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     document.querySelectorAll(".choices").forEach(item => {
         item.addEventListener('click', (event) => {
-            var humanChoice = getHumanChoice(e)
+            var humanChoice = getHumanChoice(event)
             var computerChoice = getComputerChoice()
             playRound(humanChoice, computerChoice)
         }) 
