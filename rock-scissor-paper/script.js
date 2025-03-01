@@ -8,11 +8,11 @@ humanScore = computerScore = 0;
     
 
 document.addEventListener("DOMContentLoaded", ()=>{
-
+    var humanChoice, computerChoice
     document.querySelectorAll(".choices").forEach(item => {
         item.addEventListener('click', (event) => {
-            var humanChoice = getHumanChoice(event)
-            var computerChoice = getComputerChoice()
+            humanChoice = getHumanChoice(event)
+            computerChoice = getComputerChoice()
             playRound(humanChoice, computerChoice)
         }) 
     })
