@@ -2,42 +2,45 @@ const log = console.log
 
 log("Hello cat")
 
-var humanScore, computerScore;
+var humanScore;
+var computerScore;
 humanScore = computerScore = 0;
 
     
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    var humanChoice, computerChoice
+    var humanChoice;
+    var computerChoice;
+
     document.querySelectorAll(".choices").forEach(item => {
         item.addEventListener('click', (event) => {
             humanChoice = getHumanChoice(event)
             computerChoice = getComputerChoice()
             playRound(humanChoice, computerChoice)
-        }) 
-    })
 
-    var choices = {
-        'rock': '✊', 
-        'scissor': '✌',
-        'paper': '🖐'
-    }
-
-    document.querySelector('#ur_choice').innerHTML = choices[humanChoice]
-    document.querySelector('#comp_choice').innerHTML = choices[computerChoice]
-    
-    document.querySelector('#ur_score').innerHTML = humanScore
-    document.querySelector('#comp_score').innerHTML = computerScore
+            var choices = {
+                'rock': '✊', 
+                'scissor': '✌',
+                'paper': '🖐',
+            }
         
-    }
-)
+            document.querySelector('#ur_choice').innerHTML = choices[humanChoice]
+            document.querySelector('#comp_choice').innerHTML = choices[computerChoice]
+            
+            document.querySelector('#ur_score').innerHTML = humanScore
+            document.querySelector('#comp_score').innerHTML = computerScore
+                
+        })
+    }) 
+})
 
 
-function playGame(){
+
+// function playGame(){
     
     
     
-}
+// }
 
 
 function getComputerChoice(){
