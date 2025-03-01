@@ -1,0 +1,13 @@
+.container div {
+    height: 20px;
+    width: 20px;
+    border: 0.5px gray solid;
+}
+
+.container div:hover{
+    background-color:rosybrown;
+}
+
+.container {
+    aspect-ratio: 1/1;
+}

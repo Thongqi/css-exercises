@@ -1,0 +1,1 @@
+I am going to create a magnetic drawing board like this https://www.google.com/search?q=magnetic+drawing+board+kid
