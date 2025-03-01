@@ -73,14 +73,14 @@ function playRound(humanChoice, computerChoice){
     if (humanChoice === 'rock'){
         switch (computerChoice){
             case 'paper':
-                result.innerHTML('You lose(´。＿。｀)')
+                result.innerHTML= 'You lose(´。＿。｀)'
                 computerScore++
                 break;
             case 'rock':
-                result.innerHTML('Computer: ✊  Is a tie👔')
+                result.innerHTML='Computer: ✊  Is a tie👔'
                 break;
             case 'scissor':
-                result.innerHTML('Computer: ✌ You wonnnnnn(｡･∀･)ﾉﾞ')
+                result.innerHTML='Computer: ✌ You wonnnnnn(｡･∀･)ﾉﾞ'
                 humanScore++;
                 break;
         }
@@ -89,15 +89,15 @@ function playRound(humanChoice, computerChoice){
     else if (humanChoice === 'scissor'){
         switch (computerChoice){
             case 'paper':
-                result.innerHTML('Computer: 🖐  You wonnnnnn(｡･∀･)ﾉﾞ')
+                result.innerHTML='Computer: 🖐  You wonnnnnn(｡･∀･)ﾉﾞ'
                 humanScore++;
                 break;
             case 'rock':
-                result.innerHTML('Computer: ✊   You lose(´。＿。｀)')
+                result.innerHTML='Computer: ✊   You lose(´。＿。｀)'
                 computerScore++
                 break;
             case 'scissor':
-                result.innerHTML('Computer: ✌  Is a tie👔')
+                result.innerHTML='Computer: ✌  Is a tie👔'
                 break;
         }
     }
@@ -105,14 +105,14 @@ function playRound(humanChoice, computerChoice){
     else if (humanChoice === 'paper') {
         switch (computerChoice){
             case 'paper':
-                result.innerHTML('Computer: 🖐  Is a tie👔')
+                result.innerHTML='Computer: 🖐  Is a tie👔'
                 break;
             case 'rock':
-                result.innerHTML('Computer: ✊   You wonnnnnn(｡･∀･)ﾉﾞ')
+                result.innerHTML='Computer: ✊   You wonnnnnn(｡･∀･)ﾉﾞ'
                 humanScore++;
                 break;
             case 'scissor':
-                result.innerHTML('Computer: ✌  You lose(´。＿。｀)')
+                result.innerHTML='Computer: ✌  You lose(´。＿。｀)'
                 computerScore++
                 break;
         }
