@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     var usersize = document.querySelector('#grid-size')
     usersize.addEventListener('change', () => {
         gridsize = this.value
+        console.log(gridsize)
+        createGrid(gridsize, container)
     })
 
     createGrid(gridsize, container)
@@ -23,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //reset
     var resetbutton = document.querySelector('#reset')
     console.log(resetbutton)
-    resetbutton.addEventListener('click', reset(gridslists))
-    resetbutton.addEventListener('click', reset(gridslists))
+    resetbutton.addEventListener('click', () => this.reset(gridslists))
+    resetbutton.addEventListener('click', () => reset(gridslists))
 
     
 })

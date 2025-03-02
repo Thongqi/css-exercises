@@ -27,3 +27,8 @@
     width: 20px;
     border: 0.5px rgb(189, 185, 185) solid;
 }
+
+#grid-size{
+    border: 1px goldenrod solid;
+    border-radius: 5px;
+}
