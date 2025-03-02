@@ -1,8 +1,12 @@
-
+:root {
+    --content: '';
+}
 
 .hovered{
+    content:var(--content);
     background-color:rosybrown;
 }
+
 
 .container {
     width: fit-content;

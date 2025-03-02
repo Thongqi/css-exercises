@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var gridsize = 16
 
-    
+    changeGridContent()
     createGrid(gridsize, container)
     var usersize = document.querySelector('#grid-size')
     usersize.addEventListener('input', () => {
@@ -16,12 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     var gridslists = document.querySelectorAll('.container>div>div')
     
-    
     //reset
     
 
     
 })
+
+function changeGridContent(){
+    var choices = document.querySelectorAll('.content')
+
+    choices.forEach((choice) => {
+        choice.addEventListener('click', () = {
+            var content = this.getAttribute('data-content')
+            console.log(content)
+            if (content != 'rainbow'){
+                document.querySelector(':root').style.setProperty('--content', content)
+            }
+            
+        })
+    })
+}
 
 
 function createGrid(gridsize, container){
