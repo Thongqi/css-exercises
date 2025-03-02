@@ -56,6 +56,7 @@ function changeGridColor(hovereditem){
 }
 
 function reset(gridslists){
+    
     gridslists.forEach((grid) => {
         grid.classList.remove('hovered')
     })

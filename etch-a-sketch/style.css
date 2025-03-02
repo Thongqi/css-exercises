@@ -1,8 +1,4 @@
-.container div {
-    height: 20px;
-    width: 20px;
-    border: 0.5px gray solid;
-}
+
 
 .hovered{
     background-color:rosybrown;
@@ -19,4 +15,14 @@
 #reset:hover{
     background-color: gold;
     color: white;
+}
+
+.row {
+    display: flex;
+    border: 0.5px rgba(173, 173, 173, 0.445) solid;
+}
+
+.row div {
+    height: 20px;
+    width: 20px;
 }
