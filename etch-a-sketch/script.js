@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var resetbutton = document.querySelector('#reset')
     console.log(resetbutton)
     resetbutton.addEventListener('click', () => this.reset(gridslists))
-    resetbutton.addEventListener('click', () => reset(gridslists))
+    // resetbutton.addEventListener('click', () => reset(gridslists))
 
     
 })
