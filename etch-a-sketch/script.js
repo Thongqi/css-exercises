@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //reset
     var resetbutton = document.querySelector('#reset')
+    console.log(resetbutton)
+    resetbutton.addEventListener('click', reset(gridslists))
     resetbutton.addEventListener('click', reset(gridslists))
 
     
@@ -56,7 +58,6 @@ function changeGridColor(hovereditem){
 }
 
 function reset(gridslists){
-    
     gridslists.forEach((grid) => {
         grid.classList.remove('hovered')
     })
