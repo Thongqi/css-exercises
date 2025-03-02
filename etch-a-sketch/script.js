@@ -38,7 +38,7 @@ function createGrid(gridsize, container){
     // }
     while (i < gridsize){
         const row = document.createElement('div')
-        div.classList.add('row')
+        row.classList.add('row')
         container.appendChild(row)
         let j = 0;
         while(j < gridsize){
