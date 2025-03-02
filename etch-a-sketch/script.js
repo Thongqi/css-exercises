@@ -5,14 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     var gridsize = 16
+
+    createGrid(gridsize, container)
+
     var usersize = document.querySelector('#grid-size')
-    usersize.addEventListener('change', () => {
-        gridsize = this.value
+    usersize.addEventListener('input', () => {
+        gridsize = usersize.value
         console.log(gridsize)
         createGrid(gridsize, container)
     })
 
-    createGrid(gridsize, container)
+    
 
     //change color on hover
     var gridslists = document.querySelectorAll('.container>div>div')
