@@ -6,15 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var gridsize = 16
 
-    createGrid(gridsize, container)
+    
 
     var usersize = document.querySelector('#grid-size')
     usersize.addEventListener('input', () => {
         gridsize = usersize.value
         container.innerHTML = ''
-        createGrid(gridsize, container)
     })
 
+    createGrid(gridsize, container)
     
 
     //change color on hover
