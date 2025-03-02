@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var usersize = document.querySelector('#grid-size')
     usersize.addEventListener('input', () => {
         gridsize = usersize.value
-        console.log(gridsize)
+        container.innerHTML = ''
         createGrid(gridsize, container)
     })
 
