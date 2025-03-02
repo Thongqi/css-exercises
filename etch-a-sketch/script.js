@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     var gridsize = 16
-    
-    usersize.addEventListener('change', (event) => {
+    var usersize = document.querySelector('#grid-size')
+    usersize.addEventListener('change', () => {
         gridsize = this.value
     })
 
@@ -27,10 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
 })
 
-function getUserSize(){
-    var usersize = document.querySelector('#grid-size')
-
-}
 
 function createGrid(gridsize, container){
     let i = 0
