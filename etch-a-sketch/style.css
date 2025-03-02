@@ -4,10 +4,19 @@
     border: 0.5px gray solid;
 }
 
-.container div:hover{
+.hovered{
     background-color:rosybrown;
 }
 
 .container {
     aspect-ratio: 1/1;
+}
+
+#reset {
+    border: 1px solid goldenrod;
+}
+
+#reset:hover{
+    background-color: gold;
+    color: white;
 }
