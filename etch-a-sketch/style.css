@@ -2,14 +2,15 @@
     --content: '';
 }
 
+.hovered::before{
+    content:var(--content);
+}
+
 .hovered{
 
     background-color:rosybrown;
 }
 
-.hovered::before{
-    content:var(--content);
-}
 
 
 .container {
