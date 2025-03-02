@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     createGrid(gridsize, container)
 
     //change color on hover
-    var gridslists = document.querySelectorAll('.container div')
+    var gridslists = document.querySelectorAll('.container>div>div')
     gridslists.forEach((item) => {
         item.addEventListener('mouseover', () => {
             changeGridColor(item)
