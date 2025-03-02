@@ -3,8 +3,12 @@
 }
 
 .hovered{
-    content:var(--content);
+
     background-color:rosybrown;
+}
+
+.hovered::before{
+    content:var(--content);
 }
 
 
