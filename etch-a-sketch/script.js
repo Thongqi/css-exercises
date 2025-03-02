@@ -7,19 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     var gridsize = 16
 
     
-
+    createGrid(gridsize, container)
     var usersize = document.querySelector('#grid-size')
     usersize.addEventListener('input', () => {
         gridsize = usersize.value
         container.innerHTML = ''
+        createGrid(gridsize, container)
     })
     var gridslists = document.querySelectorAll('.container>div>div')
-    createGrid(gridsize, container)
+    
     
     //reset
     var resetbutton = document.querySelector('#reset')
     console.log(resetbutton)
-    // resetbutton.addEventListener('click', () => this.reset(gridslists))
+    resetbutton.addEventListener('click', () => this.reset(gridslists))
     resetbutton.addEventListener('click', () => reset(gridslists))
 
     
