@@ -29,15 +29,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function createGrid(gridsize, container){
-    let i = 0
-    let j = 0
+    // var totalgrid = gridsize * gridsize
+    // let i = 0;
+    // while (i < totalgrid){
+    //     const div = document.createElement('div')
+    //     container.appendChild(div)
+    //     i++
+    // }
     while (i < gridsize){
-        const div = document.createElement('div')
-        container.appendChild(div)
-
+        const row = document.createElement('div')
+        div.classList.add('row')
+        container.appendChild(row)
+        let j = 0;
         while(j < gridsize){
             const div = document.createElement('div')
-            container.appendChild(div)
+            row.appendChild(div)
             j++
         }
         i++
