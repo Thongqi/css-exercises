@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const div = document.createElement("div")
 
 
-    var gridsize = getUserSize()? getUserSize:16
+    var gridsize = 16
     
+    usersize.addEventListener('change', (event) => {
+        gridsize = this.value
+    })
+
     createGrid(gridsize, container)
 
     //change color on hover
@@ -25,15 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getUserSize(){
     var usersize = document.querySelector('#grid-size')
-    usersize.addEventListener('change', (event) => {
-        return this.value
-    })
+
 }
 
 function createGrid(gridsize, container){
     let i = 0
     let j = 0
     while (i < gridsize){
+        const div = document.createElement('div')
+        container.appendChild(div)
+
         while(j < gridsize){
             const div = document.createElement('div')
             container.appendChild(div)
