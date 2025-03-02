@@ -31,7 +31,8 @@ function getUserSize(){
 }
 
 function createGrid(gridsize){
-    let i = 0; 
+    let i = 0
+    let j = 0
     while (i < gridsize){
         while(j < gridsize){
             const div = document.createElement('div')
