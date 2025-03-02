@@ -26,7 +26,7 @@ function changeGridContent(){
     var choices = document.querySelectorAll('.content')
 
     choices.forEach((choice) => {
-        choice.addEventListener('click', () = {
+        choice.addEventListener('click', () => {
             var content = this.getAttribute('data-content')
             console.log(content)
             if (content != 'rainbow'){
