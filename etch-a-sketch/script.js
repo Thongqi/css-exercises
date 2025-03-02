@@ -18,10 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     
     //reset
-    var resetbutton = document.querySelector('#reset')
-    console.log(resetbutton)
-    resetbutton.addEventListener('click', () => this.reset(gridslists))
-    resetbutton.addEventListener('click', () => reset(gridslists))
+    
 
     
 })
@@ -55,6 +52,8 @@ function createGrid(gridsize, container){
         })
     })
 
+    reset(gridslists)
+
 }
 
 function changeGridColor(hovereditem){
@@ -63,7 +62,12 @@ function changeGridColor(hovereditem){
 }
 
 function reset(gridslists){
-    gridslists.forEach((grid) => {
-        grid.classList.remove('hovered')
+    var resetbutton = document.querySelector('#reset')
+    console.log(resetbutton)
+    resetbutton.addEventListener('click', () => {
+        gridslists.forEach((grid) => {
+            grid.classList.remove('hovered')
+        })
     })
+
 }
