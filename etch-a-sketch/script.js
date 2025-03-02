@@ -13,18 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
         gridsize = usersize.value
         container.innerHTML = ''
     })
-
+    var gridslists = document.querySelectorAll('.container>div>div')
     createGrid(gridsize, container)
     
-
-    //change color on hover
-    var gridslists = document.querySelectorAll('.container>div>div')
-    gridslists.forEach((item) => {
-        item.addEventListener('mouseover', () => {
-            changeGridColor(item)
-        })
-    })
-
     //reset
     var resetbutton = document.querySelector('#reset')
     console.log(resetbutton)
@@ -55,6 +46,14 @@ function createGrid(gridsize, container){
         }
         i++
     }
+
+    var gridslists = document.querySelectorAll('.container>div>div')
+    gridslists.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            changeGridColor(item)
+        })
+    })
+
 }
 
 function changeGridColor(hovereditem){
