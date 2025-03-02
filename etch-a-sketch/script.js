@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var gridsize = getUserSize()? getUserSize:16
     
-    createGrid(gridsize)
+    createGrid(gridsize, container)
 
     //change color on hover
     var gridslists = document.querySelectorAll('.container div')
@@ -30,7 +30,7 @@ function getUserSize(){
     })
 }
 
-function createGrid(gridsize){
+function createGrid(gridsize, container){
     let i = 0
     let j = 0
     while (i < gridsize){
