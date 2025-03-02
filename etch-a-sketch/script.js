@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function createGrid(gridsize, container){
     // var totalgrid = gridsize * gridsize
-    // let i = 0;
+    let i = 0;
     // while (i < totalgrid){
     //     const div = document.createElement('div')
     //     container.appendChild(div)
