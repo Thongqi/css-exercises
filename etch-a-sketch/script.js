@@ -27,8 +27,8 @@ function changeGridContent(){
     var choices = document.querySelectorAll("input[name = 'content']")
 
     var pickedcolor = document.querySelector("input[name = 'color']")
-    pickedcolor.addEventListener('input', () => {
-        document.querySelector(':root').style.setProperty('--color', this.value)
+    pickedcolor.addEventListener('input', (e) => {
+        document.querySelector(':root').style.setProperty('--color', e.target.value)
     })
     
 

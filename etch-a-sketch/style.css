@@ -15,12 +15,11 @@ body{
 }
 
 .hovered{
-
     background-color:var(--color);
 }
 
 input[name='content'] {
-    display: none;
+    /* display: none; */
 }
 
 .container {
