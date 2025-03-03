@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var slider = document.querySelector('#slider')
     slider.addEventListener('input', (e) => {
         console.log(e.target.value)
+        clear(e.target.value)
     })
 })
 
@@ -60,6 +61,8 @@ function createGrid(gridsize, container){
         const lastChild = document.querySelector('#slider')
 
         row.classList.add('row')
+        row.id = 'row-' + i
+
         container.insertBefore(row, lastChild)
 
         let j = 0;
@@ -95,6 +98,15 @@ function createGrid(gridsize, container){
 function changeGridColor(hovereditem){
     // add class to hovered grid
     hovereditem.classList.add('hovered')
+}
+
+function clear(rowid){
+    var row2clear = document.querySelector(`row-${rowid}`)
+
+    row2clear.forEach((grid) => {
+        grid.classList.remove('hovered')
+        grid.style.backgroundColor = ''
+    })
 }
 
 function reset(gridslists){
