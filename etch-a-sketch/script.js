@@ -26,6 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function changeGridContent(){
     var choices = document.querySelectorAll("input[name = 'content']")
 
+    var pickedcolor = document.querySelector("input[name = 'color']")
+    pickedcolor.addEventListener('input', () => {
+        document.querySelector(':root').style.setProperty('--color', this.value)
+    })
+    
+
     choices.forEach((choice) => {
         choice.addEventListener('click', () => {
             if(choice.checked) {
@@ -33,9 +39,7 @@ function changeGridContent(){
                 console.log(content)
                 if (content != 'rainbow'){
                     document.querySelector(':root').style.setProperty('--content', content)
-                    document.querySelectorAll('.hovered').forEach((item)=>{
-                        item.style.setProperty('background-color', '')
-                    })
+                    document.querySelector(':root').style.setProperty('--color', '')
                 }
              
             }
