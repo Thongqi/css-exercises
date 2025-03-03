@@ -28,7 +28,7 @@ function changeGridContent(){
 
     choices.forEach((choice) => {
         if(choice.checked) {
-            var content = choice.target.getAttribute('data-content')
+            var content = choice.getAttribute('data-content')
             console.log(content)
             if (content != 'rainbow'){
                 document.querySelector(':root').style.setProperty('--content', content)
