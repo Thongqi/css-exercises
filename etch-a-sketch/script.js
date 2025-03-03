@@ -37,9 +37,7 @@ function changeGridContent(){
             else {
                 document.querySelector(':root').style.setProperty('--content', '')
                 var randomColor = Math.floor(Math.random()*16777215).toString(16)
-                document.querySelectorAll('.hovered').forEach((item) => {
-                    item.style.setProperty('background-color', '#' + randomColor)
-                })
+                document.querySelector(':root').style.setProperty('--rainbow', '#' + randomColor)
             }
         })
     })

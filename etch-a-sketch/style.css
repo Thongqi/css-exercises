@@ -4,6 +4,7 @@ body{
 
 :root {
     --content: '';
+    --rainbow: 'rosybrown';
 }
 
 .hovered::before{
@@ -15,7 +16,7 @@ body{
 
 .hovered{
 
-    background-color:rosybrown;
+    background-color:var(--rainbow);
 }
 
 
