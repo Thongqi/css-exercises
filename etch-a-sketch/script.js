@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     createGrid(gridsize, container)
     var usersize = document.querySelector('#grid-size')
     usersize.addEventListener('input', () => {
-        gridsize = usersize.value
+        gridsize = (usersize.value < 101 && usersize.value > 1)?usersize.value:gridsize
+        
         container.innerHTML = ''
         createGrid(gridsize, container)
     })
@@ -31,11 +32,12 @@ function changeGridContent(){
             console.log(content)
             if (content != 'rainbow'){
                 document.querySelector(':root').style.setProperty('--content', content)
+                document.querySelector('.hovered').style.setProperty('background-color', '')
             }
             else {
                 document.querySelector(':root').style.setProperty('--content', '')
                 var randomColor = Math.floor(Math.random()*16777215).toString(16)
-                document.querySelector('.hovered').style.setProperty('background-color', randomColor)
+                document.querySelector('.hovered').style.setProperty('background-color', '#' + randomColor)
             }
         })
     })
