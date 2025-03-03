@@ -6,13 +6,18 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="script.js" type="text/javascript"></script>
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <title>Etch-a-sketch 🎨</title>
 </head>
-<body class="text-center space-y-4">
-    <h1>Draw someting!</h1>
+<body class="text-center space-y-4 py-10">
+    <h1 class="text-3xl font-bold">Draw someting!</h1>
     <div class="drawingboard flex gap-4 w-fit mx-auto">
-        <div class="left w-[20vw] flex flex-col gap-4 my-auto">
+        <div class="left flex flex-col gap-4 my-auto">
             <div>
                 <label for="grid-size">Grid Size</label>
                 <input type="number" name="grid" id="grid-size" min="2" max="100">
@@ -23,31 +28,33 @@
                 <label for="body">Color</label>
             </div>
 
-            <div>
+            <div class="content">
                 <label for="rainbow">RAINBOW</label>
                 <input type="radio" name="content" id="rainbow" data-content="rainbow">
             </div>
             
-            <div>
+            <div class="content">
                 <label for="cat">CAT</label>
                 <input type="radio" name="content" id="cat" data-content="'&#128049;'">
             </div>
             
-            <div>
+            <div class="content">
                 <label for="poop">💩</label>
                 <input type="radio" name="content" id="poop" data-content="'&#128169;'">
             </div>
             
-            <div>
+            <div class="content">
                 <label for="flower">FLOWER</label>
                 <input type="radio" name="content" id="flower" data-content="'&#127804;'">
             </div>
             
         </div>
         
+        <div class="container flex">
+
+            <input type="range" name="slider" id="slider" min="0" max="100" value="0">
+        </div>
         
-    
-        <div class="container"></div>
     </div>
     
 

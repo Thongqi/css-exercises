@@ -20,7 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //reset
     
 
-    
+    var slider = document.querySelector('#slider')
+    slider.addEventListener('input', (e) => {
+        console.log(e.target.value)
+    })
 })
 
 function changeGridContent(){
@@ -50,18 +53,17 @@ function changeGridContent(){
 
 
 function createGrid(gridsize, container){
-    // var totalgrid = gridsize * gridsize
     let i = 0;
-    // while (i < totalgrid){
-    //     const div = document.createElement('div')
-    //     container.appendChild(div)
-    //     i++
-    // }
+
     while (i < gridsize){
         const row = document.createElement('div')
+        const lastChild = document.querySelector('#slider')
+
         row.classList.add('row')
-        container.appendChild(row)
+        container.insertBefore(row, lastChild)
+
         let j = 0;
+
         while(j < gridsize){
             const div = document.createElement('div')
             row.appendChild(div)
@@ -69,6 +71,9 @@ function createGrid(gridsize, container){
         }
         i++
     }
+
+    // set slider size 
+    document.querySelector('#slider').setAttribute('max', gridsize)
 
     var gridslists = document.querySelectorAll('.container>div>div')
     gridslists.forEach((item) => {
