@@ -63,7 +63,7 @@ function createGrid(gridsize, container){
         row.classList.add('row')
         row.id = 'row-' + i
 
-        container.insertBefore(row, lastChild)
+        container.appendChild(row)
 
         let j = 0;
 
