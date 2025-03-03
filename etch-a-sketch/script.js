@@ -27,15 +27,18 @@ function changeGridContent(){
     var choices = document.querySelectorAll("input[name = 'content']")
 
     choices.forEach((choice) => {
-        if(choice.checked) {
-            var content = choice.getAttribute('data-content')
-            console.log(content)
-            if (content != 'rainbow'){
-                document.querySelector(':root').style.setProperty('--content', content)
-                document.querySelectorAll('.hovered').style.setProperty('background-color', '')
+        choice.addEventListener('click', () => {
+            if(choice.checked) {
+                var content = choice.getAttribute('data-content')
+                console.log(content)
+                if (content != 'rainbow'){
+                    document.querySelector(':root').style.setProperty('--content', content)
+                    document.querySelectorAll('.hovered').style.setProperty('background-color', '')
+                }
+             
             }
-         
-        }
+        })
+        
     })
 }
 
