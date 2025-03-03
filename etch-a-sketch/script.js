@@ -63,9 +63,10 @@ function createGrid(gridsize, container){
 
     var gridslists = document.querySelectorAll('.container>div>div')
     gridslists.forEach((item) => {
-        item.addEventListener('mouseover', () => {
+        item.addEventListener('mouseover', (item) => {
             if (document.querySelector('#rainbow').checked){
-                randomColor(item)
+                console.log(item)
+                rainbowColor(item)
             }
             
             changeGridColor(item)
@@ -88,13 +89,13 @@ function reset(gridslists){
     resetbutton.addEventListener('click', () => {
         gridslists.forEach((grid) => {
             grid.classList.remove('hovered')
-            grid.style.backgroundcolor = ''
+            grid.style.backgroundColor = ''
         })
     })
 
 }
 
-function randomColor(item){
+function rainbowColor(item){
     var randomColor = Math.floor(Math.random()*16777215).toString(16)
-    item.style.backgroundcolor = '#' + randomColor
+    item.style.backgroundColor = '#' + randomColor
 }
