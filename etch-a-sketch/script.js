@@ -32,12 +32,14 @@ function changeGridContent(){
             console.log(content)
             if (content != 'rainbow'){
                 document.querySelector(':root').style.setProperty('--content', content)
-                document.querySelector('.hovered').style.setProperty('background-color', '')
+                document.querySelectorAll('.hovered').style.setProperty('background-color', '')
             }
             else {
                 document.querySelector(':root').style.setProperty('--content', '')
                 var randomColor = Math.floor(Math.random()*16777215).toString(16)
-                document.querySelector('.hovered').style.setProperty('background-color', '#' + randomColor)
+                document.querySelectorAll('.hovered').forEach((item) => {
+                    item.style.setProperty('background-color', '#' + randomColor)
+                })
             }
         })
     })
