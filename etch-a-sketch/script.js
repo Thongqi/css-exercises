@@ -33,7 +33,9 @@ function changeGridContent(){
                 console.log(content)
                 if (content != 'rainbow'){
                     document.querySelector(':root').style.setProperty('--content', content)
-                    document.querySelectorAll('.hovered').style.setProperty('background-color', '')
+                    document.querySelectorAll('.hovered').forEach((item)=>{
+                        item.style.setProperty('background-color', '')
+                    })
                 }
              
             }
