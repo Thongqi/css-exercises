@@ -101,7 +101,7 @@ function changeGridColor(hovereditem){
 }
 
 function clear(rowid){
-    var row2clear = document.querySelector(`#row-${rowid}`)
+    var row2clear = document.querySelector(`#row-${rowid} > div`)
 
     row2clear.forEach((grid) => {
         grid.classList.remove('hovered')
