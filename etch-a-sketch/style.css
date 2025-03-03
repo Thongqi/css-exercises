@@ -19,23 +19,26 @@ body{
     background-color:var(--rainbow);
 }
 
-
+input[name='content'] {
+    display: none;
+}
 
 .container {
     width: fit-content;
     background-color: azure;
 }
 
-#reset, button {
+#reset, div:has(> input[name='content']){
     border: 1px solid goldenrod;
-    background-color: cornflowerblue;
+    background-color: rgb(169, 197, 248);
     border-radius: 5px;
 }
 
-#reset:hover, button:hover{
+#reset:hover, div:has(> input[name='content']):hover{
     background-color: gold;
     color: white;
 }
+
 
 .row {
     display: flex;

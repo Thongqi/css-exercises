@@ -24,22 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function changeGridContent(){
-    var choices = document.querySelectorAll('.content')
+    var choices = document.querySelectorAll("input[name = 'content']")
 
     choices.forEach((choice) => {
-        choice.addEventListener('click', (e) => {
-            var content = e.target.getAttribute('data-content')
+        if(choice.checked) {
+            var content = choice.target.getAttribute('data-content')
             console.log(content)
             if (content != 'rainbow'){
                 document.querySelector(':root').style.setProperty('--content', content)
                 document.querySelectorAll('.hovered').style.setProperty('background-color', '')
             }
-            else {
-                document.querySelector(':root').style.setProperty('--content', '')
-                var randomColor = Math.floor(Math.random()*16777215).toString(16)
-                document.querySelector(':root').style.setProperty('--rainbow', '#' + randomColor)
-            }
-        })
+         
+        }
     })
 }
 
@@ -68,7 +64,10 @@ function createGrid(gridsize, container){
     var gridslists = document.querySelectorAll('.container>div>div')
     gridslists.forEach((item) => {
         item.addEventListener('mouseover', () => {
-            changeGridContent()
+            if (document.querySelector('#rainbow').checked){
+                randomColor(item)
+            }
+            
             changeGridColor(item)
 
         })
@@ -89,7 +88,13 @@ function reset(gridslists){
     resetbutton.addEventListener('click', () => {
         gridslists.forEach((grid) => {
             grid.classList.remove('hovered')
+            grid.style.backgroundcolor = ''
         })
     })
 
+}
+
+function randomColor(item){
+    var randomColor = Math.floor(Math.random()*16777215).toString(16)
+    item.style.backgroundcolor = '#' + randomColor
 }
