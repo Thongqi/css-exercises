@@ -32,7 +32,11 @@ function changeGridContent(){
             if (content != 'rainbow'){
                 document.querySelector(':root').style.setProperty('--content', content)
             }
-            
+            else {
+                document.querySelector(':root').style.setProperty('--content', '')
+                var randomColor = Math.floor(Math.random()*16777215).toString(16)
+                document.querySelector('.hovered').style.setProperty('background-color', randomColor)
+            }
         })
     })
 }
@@ -62,7 +66,9 @@ function createGrid(gridsize, container){
     var gridslists = document.querySelectorAll('.container>div>div')
     gridslists.forEach((item) => {
         item.addEventListener('mouseover', () => {
+            changeGridContent()
             changeGridColor(item)
+
         })
     })
 

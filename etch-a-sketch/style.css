@@ -1,9 +1,16 @@
+body{
+    background-color: lightcoral;
+}
+
 :root {
     --content: '';
 }
 
 .hovered::before{
     content:var(--content);
+    display: block;
+    margin: -2px;
+    font-size: 14px;
 }
 
 .hovered{
@@ -15,13 +22,16 @@
 
 .container {
     width: fit-content;
+    background-color: azure;
 }
 
 #reset, button {
     border: 1px solid goldenrod;
+    background-color: chocolate;
+    border-radius: 5px;
 }
 
-#reset:hover{
+#reset:hover, button:hover{
     background-color: gold;
     color: white;
 }
@@ -40,4 +50,8 @@
 #grid-size{
     border: 1px goldenrod solid;
     border-radius: 5px;
+}
+
+#grid-size:hover{
+    background-color: white;
 }
