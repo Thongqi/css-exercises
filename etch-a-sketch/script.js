@@ -64,7 +64,6 @@ function createGrid(gridsize, container){
     var gridslists = document.querySelectorAll('.container>div>div')
     gridslists.forEach((item) => {
         item.addEventListener('mouseover', (item) => {
-            console.log('hi')
             if (document.querySelector('#rainbow').checked){
                 console.log(item.target)
                 rainbowColor(item.target)
