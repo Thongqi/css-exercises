@@ -45,6 +45,9 @@ function changeGridContent(){
                     document.querySelector(':root').style.setProperty('--content', content)
                     document.querySelector(':root').style.setProperty('--color', '')
                 }
+                else{
+                    document.querySelector(':root').style.setProperty('--content', '')
+                }
              
             }
         })
