@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const div = document.createElement("div")
 
+    var defaultcolor = '#f44369';
+    document.querySelector(':root').style.setProperty('--color', defaultcolor)
 
     var gridsize = 16
 
@@ -18,8 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var gridslists = document.querySelectorAll('.container>div>div')
     
     //reset
-    
-
     var slider = document.querySelector('#slider')
     slider.addEventListener('input', (e) => {
         console.log(e.target.value)
