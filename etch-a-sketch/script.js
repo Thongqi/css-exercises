@@ -92,6 +92,16 @@ function createGrid(gridsize, container){
             changeGridColor(item.target)
 
         })
+
+        item.addEventListener('touchstart', (item) => {
+            if (document.querySelector('#rainbow').checked){
+                console.log(item.target)
+                rainbowColor(item.target)
+            }
+            
+            changeGridColor(item.target)
+
+        })
     })
 
     reset(gridslists)
