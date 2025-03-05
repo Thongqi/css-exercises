@@ -1,0 +1,22 @@
+.container {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+}
+
+.container button{
+    background-color: antiquewhite;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgb(163, 163, 163);
+}
+
+.display{
+    background-color: gainsboro;
+    box-shadow: inset 2px 2px 2px gray;
+}
+
+.equal{
+    grid-column: -2/0;
+}
+
