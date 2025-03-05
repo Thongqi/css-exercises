@@ -1,15 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
 
+    var firstValue = []
+    var operator
     buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
-            var value = e.target.getAttribute('data-value')
-            console.log(e.target.getAttribute('data-value'))
-            console.log(this.getAttribute('data-value'))
+            var 
+            console.log(value)
 
             document.querySelector('.display').innerHTML = value
 
-        
+            // if +-*/= is press, store the first string
+            if (parseInt(value)){
+                firstValue.push(parseInt(value))
+            }
+            else{
+                if(firstValue.length < 1){
+                    break;
+                }
+                else{
+                    operator = value
+                }
+            }
+
+            if (value == 'enter'){
+                checkCase
+            }
+            
         })
     })
 
@@ -38,4 +55,19 @@ function multiply(array) {
 function divide(num1, num2){
     return num1 / num2
 }
-  
+
+function checkCase(value){
+    switch (value) {
+        case add:
+            return 'add'
+            
+            break;
+    
+        default:
+            break;
+    }
+}
+
+function enter(){
+
+}

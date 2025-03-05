@@ -2,21 +2,29 @@
     background-color: black;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(7, auto);
+    width: 20vw;
+    height: 20vw;
 }
 
 .container button{
     background-color: antiquewhite;
     border: 1px solid black;
-    box-shadow: 2px 2px 2px rgb(163, 163, 163);
+
+}
+
+.container button:hover{
+    background-color: lightblue;
 }
 
 .display{
     background-color: gainsboro;
     box-shadow: inset 2px 2px 2px gray;
+    grid-column: span;
 }
 
 .equal{
-    grid-column: -2/0;
+    grid-column: 5/7;
+    grid-column: 4/5;
 }
 
