@@ -62,9 +62,7 @@ function sum(array) {
 };
   
 function multiply(array) {
-    return array.reduce((acc, val) => 
-         acc * val 
-      )
+    return num 1 * num2
   };
 
 function divide(num1, num2){
