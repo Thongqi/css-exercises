@@ -14,17 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // if +-*/= is press, store the first string
             if (parseInt(value)){
                 if (operator){
-                    secValue += value
-
+                    secValue = secValue? secValue + value: let secValue = ''
                 }
                 else{
-                    firstValue += value
+                    firstValue = firstValue? firstValue + value: let firstValue = ''
                     console.log(firstValue)
                 }
                 display(firstValue, operator, secValue)
             }
             else{
-                if(secValue.length < 1){
+                if(secValue){
                     operator = value
                 }
                 else if (operator){
@@ -101,8 +100,7 @@ function joinNumber(array){
 }
 
 function display(...array){
-    var result = array.map(item => joinNumber(item))
-    document.querySelector('.display').innerHTML = result
+    document.querySelector('.display').innerHTML = array.join('')
 }
 
 function getValue(e){
