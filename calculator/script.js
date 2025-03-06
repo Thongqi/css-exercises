@@ -1,29 +1,25 @@
-var firstValue = []
-var secValue = []
-var operator
+
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
-
-    
+    var firstValue
+    var secValue
     
 
     buttons.forEach((button) => {
-        var firstValue = []
-        var secValue = []
-        var operator
+        
         button.addEventListener('click', (e) => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
-
+            var operator
             // if +-*/= is press, store the first string
             if (parseInt(value)){
                 if (operator){
-                    secValue.push(parseInt(value))
+                    secValue += value
 
                 }
                 else{
-                    firstValue[firstValue.length] = value
-                    firstValue.push(parseInt(value))
+                    firstValue += value
+                    console.log(firstValue)
                 }
                 display(firstValue, operator, secValue)
             }
@@ -37,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     var result = operation(firstValue, secValue, operator)
                     display(result)
 
-                    var firstValue = []
-                    var secValue = []
+                    firstValue = ''
+                    secValue = ''
                 }
                 else{
                     //donothing
@@ -106,7 +102,7 @@ function joinNumber(array){
 
 function display(...array){
     var result = array.map(item => joinNumber(item))
-    document.querySelector('.display').innerHTML = joinNumber(result)
+    document.querySelector('.display').innerHTML = result
 }
 
 function getValue(e){
