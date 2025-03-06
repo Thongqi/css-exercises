@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(value)
             var operator
             // if +-*/= is press, store the first string
-            if (parseInt(value)){
+            if (typeof parseInt(value) != NaN){
                 if (operator){
                     secValue = secValue? secValue + value: value
                 }
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 display(firstValue, operator, secValue)
             }
             else{
-                if(secValue){
+                if(typeof secValue === undefined){
                     operator = value
                 }
                 else if (operator){
