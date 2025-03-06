@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // if +-*/= is press, store the first string
             if (parseInt(value)){
                 if (operator){
-                    secValue = secValue? secValue + value: let secValue = ''
+                    secValue = secValue? secValue + value: value
                 }
                 else{
-                    firstValue = firstValue? firstValue + value: let firstValue = ''
+                    firstValue = firstValue? firstValue + value: value
                     console.log(firstValue)
                 }
                 display(firstValue, operator, secValue)
