@@ -4,12 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var firstValue = []
     var secValue = []
     var operator
+    var displayValue
     buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
-
-            document.querySelector('.display').innerHTML = value
 
             // if +-*/= is press, store the first string
             if (parseInt(value)){
@@ -19,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 else{
                     firstValue.push(parseInt(value))
                 }
+                display(firstValue, operator, secValue)
             }
             else{
                 if(secValue.length < 1){
@@ -26,7 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 else if (operator){
                     //perform operation
-                    operation(firstValue, secValue, operator)
+                    console.log(firstValue)
+                    var result = operation(firstValue, secValue, operator)
+                    display(result)
+
+                    var firstValue = []
+                    var secValue = []
                 }
                 else{
                     //donothing
@@ -75,6 +80,8 @@ function checkCase(value){
 }
 
 function operation(num1, num2, operator){
+    num1 = joinNumber(num1)
+    num2 = joinNumber(num2)
     switch (operator){
         case 'add':
             add(num1, num2)
@@ -87,3 +94,11 @@ function operation(num1, num2, operator){
     }
 }
 
+function joinNumber(array){
+    return parseInt(array.join(''))
+}
+
+function display(...array){
+    var result = array.map(item => joinNumber(item))
+    document.querySelector('.display').innerHTML = joinNumber(result)
+}
