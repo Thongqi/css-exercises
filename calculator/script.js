@@ -33,19 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 else if (operator){
                     //perform operation
                     console.log(firstValue)
-                    result = operation(firstValue, secValue, operator)
-                    display(result)
-                    console.log(result)
-                    firstValue = secValue = operator = ''
+                    firstValue = operation(firstValue, secValue, operator)
+                    secValue = operator = ''
                 }
                 else{
                     //donothing
                 }
             }
-            
-            if (!result){
-                display(firstValue, operator, secValue)
-            }
+
+    
+            display(firstValue, operator, secValue)
+
             
         })
     })
