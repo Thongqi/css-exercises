@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var firstValue
     var secValue
     var operator
+    var result
 
     buttons.forEach((button) => {
         
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
             
-            display(firstValue, operator, secValue)
+            
             // if +-*/= is press, store the first string
             if (parseInt(value)){
                 if (operator){
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 else if (operator){
                     //perform operation
                     console.log(firstValue)
-                    var result = operation(firstValue, secValue, operator)
+                    result = operation(firstValue, secValue, operator)
                     display(result)
                     console.log(result)
                     firstValue = secValue = operator = ''
@@ -40,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 else{
                     //donothing
                 }
+            }
+            
+            if (!result){
+                display(firstValue, operator, secValue)
             }
             
         })
@@ -102,7 +107,7 @@ function joinNumber(array){
 
 function display(...array){
     if (array.length <= 1){
-        ocument.querySelector('.display').innerHTML = array[0]
+        document.querySelector('.display').innerHTML = array[0]
     }
     else{
         document.querySelector('.display').innerHTML = array.join('')
