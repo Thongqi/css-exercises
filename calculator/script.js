@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
             
-            
+            display(firstValue, operator, secValue)
             // if +-*/= is press, store the first string
             if (parseInt(value)){
                 if (operator){
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     //donothing
                 }
             }
-            display(firstValue, operator, secValue)
+            
         })
     })
 
@@ -101,7 +101,13 @@ function joinNumber(array){
 }
 
 function display(...array){
-    document.querySelector('.display').innerHTML = array.join('')
+    if (array.length <= 1){
+        ocument.querySelector('.display').innerHTML = array[0]
+    }
+    else{
+        document.querySelector('.display').innerHTML = array.join('')
+    }
+    
 }
 
 function getValue(e){
