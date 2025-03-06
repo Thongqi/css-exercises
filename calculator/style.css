@@ -20,7 +20,7 @@
 .display{
     background-color: gainsboro;
     box-shadow: inset 2px 2px 2px gray;
-    grid-column: span;
+    grid-column: span 4;
 }
 
 .equal{

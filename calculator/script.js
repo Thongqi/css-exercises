@@ -2,31 +2,37 @@ document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
 
     var firstValue = []
+    var secValue = []
     var operator
     buttons.forEach((button) => {
         button.addEventListener('click', (e) => {
-            var 
+            var value = e.target.getAttribute('data-value')
             console.log(value)
 
             document.querySelector('.display').innerHTML = value
 
             // if +-*/= is press, store the first string
             if (parseInt(value)){
-                firstValue.push(parseInt(value))
-            }
-            else{
-                if(firstValue.length < 1){
-                    break;
+                if (operator){
+                    secValue.push(parseInt(value))
                 }
                 else{
+                    firstValue.push(parseInt(value))
+                }
+            }
+            else{
+                if(secValue.length < 1){
                     operator = value
+                }
+                else if (operator){
+                    //perform operation
+                    operation(firstValue, secValue, operator)
+                }
+                else{
+                    //donothing
                 }
             }
 
-            if (value == 'enter'){
-                checkCase
-            }
-            
         })
     })
 
@@ -68,6 +74,16 @@ function checkCase(value){
     }
 }
 
-function enter(){
-
+function operation(num1, num2, operator){
+    switch (operator){
+        case 'add':
+            add(num1, num2)
+        case 'subtract':
+            subtract(num1, num2)
+        case 'multiply':
+            multiply(num1, num2)
+        case 'divide':
+            divide(num1, num2)
+    }
 }
+
