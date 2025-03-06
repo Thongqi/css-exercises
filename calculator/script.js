@@ -85,8 +85,8 @@ function checkCase(value){
 }
 
 function operation(num1, num2, operator){
-    num1 = joinNumber(num1)
-    num2 = joinNumber(num2)
+    num1 = parseInt(num1)
+    num2 = parseInt(num2)
     switch (operator){
         case 'add':
             add(num1, num2)
