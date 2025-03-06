@@ -86,13 +86,13 @@ function operation(num1, num2, operator){
     num2 = parseInt(num2)
     switch (operator){
         case 'add':
-            add(num1, num2)
+            return add(num1, num2)
         case 'subtract':
-            subtract(num1, num2)
+            return subtract(num1, num2)
         case 'multiply':
-            multiply(num1, num2)
+            return multiply(num1, num2)
         case 'divide':
-            divide(num1, num2)
+            return divide(num1, num2)
     }
 }
 
