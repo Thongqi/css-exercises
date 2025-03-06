@@ -1,14 +1,49 @@
+var firstValue = []
+var secValue = []
+var operator
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
 
     
-    var firstValue = []
-    var secValue = []
-    var operator
+    
 
     buttons.forEach((button) => {
+        var firstValue = []
+        var secValue = []
+        var operator
         button.addEventListener('click', (e) => {
-            getValue(e)
+            var value = e.target.getAttribute('data-value')
+            console.log(value)
+
+            // if +-*/= is press, store the first string
+            if (parseInt(value)){
+                if (operator){
+                    secValue.push(parseInt(value))
+
+                }
+                else{
+                    firstValue[firstValue.length] = value
+                    firstValue.push(parseInt(value))
+                }
+                display(firstValue, operator, secValue)
+            }
+            else{
+                if(secValue.length < 1){
+                    operator = value
+                }
+                else if (operator){
+                    //perform operation
+                    console.log(firstValue)
+                    var result = operation(firstValue, secValue, operator)
+                    display(result)
+
+                    var firstValue = []
+                    var secValue = []
+                }
+                else{
+                    //donothing
+                }
+            }
         })
     })
 
@@ -75,37 +110,6 @@ function display(...array){
 }
 
 function getValue(e){
-    var value = e.target.getAttribute('data-value')
-    console.log(value)
-
-    // if +-*/= is press, store the first string
-    if (parseInt(value)){
-        if (operator){
-            secValue.push(parseInt(value))
-
-        }
-        else{
-            firstValue[firstValue.length] = value
-            firstValue.push(parseInt(value))
-        }
-        display(firstValue, operator, secValue)
-    }
-    else{
-        if(secValue.length < 1){
-            operator = value
-        }
-        else if (operator){
-            //perform operation
-            console.log(firstValue)
-            var result = operation(firstValue, secValue, operator)
-            display(result)
-
-            var firstValue = []
-            var secValue = []
-        }
-        else{
-            //donothing
-        }
-    }
+    
 }
 
