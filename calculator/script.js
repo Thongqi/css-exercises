@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (result && !parseInt(value)){
                 firstValue = result
+                result = ''
             }
 
             // if +-*/= is press, store the first string
