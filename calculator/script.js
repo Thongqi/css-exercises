@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
 
-    var firstValue = []
-    var secValue = []
+    var firstValue = new Array()
+    var secValue = new Array()
+    // var firstValue = []
+    // var secValue = []
     var operator
     var displayValue
     buttons.forEach((button) => {
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     secValue.push(parseInt(value))
                 }
                 else{
+                    firstValue[firstValue.length] = value
                     firstValue.push(parseInt(value))
                 }
                 display(firstValue, operator, secValue)
