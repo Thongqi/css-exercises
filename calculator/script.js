@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
             
-            
+            if (result && !parseInt(value)){
+                firstValue = result
+            }
+
             // if +-*/= is press, store the first string
             if (parseInt(value)){
                 if (operator){
@@ -33,16 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 else if (operator){
                     //perform operation
                     console.log(firstValue)
-                    firstValue = operation(firstValue, secValue, operator)
-                    secValue = operator = ''
+                    result = operation(firstValue, secValue, operator)
+                    display(result)
+
+                    // clear stored value
+                    firstValue = secValue = operator = ''
                 }
                 else{
                     //donothing
                 }
             }
 
-    
-            display(firstValue, operator, secValue)
+            if(!result){
+                display(firstValue, operator, secValue)
+            }
+            
 
             
         })
