@@ -1,8 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
-    var firstValue
-    var secValue
+   
     
 
     buttons.forEach((button) => {
@@ -10,20 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
+            var firstValue
+            var secValue
             var operator
             // if +-*/= is press, store the first string
-            if (typeof parseInt(value) != NaN){
+            if (parseInt(value)){
                 if (operator){
                     secValue = secValue? secValue + value: value
                 }
                 else{
                     firstValue = firstValue? firstValue + value: value
-                    console.log(firstValue)
+                    console.log(firstValue, secValue)
+                    
                 }
-                display(firstValue, operator, secValue)
+                
             }
             else{
-                if(typeof secValue === undefined){
+                if(!secValue){
                     operator = value
                 }
                 else if (operator){
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     //donothing
                 }
             }
+            display(firstValue, operator, secValue)
         })
     })
 
