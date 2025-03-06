@@ -61,7 +61,7 @@ function sum(array) {
       
 };
   
-function multiply(array) {
+function multiply(num1, num2) {
     return num 1 * num2
   };
 
