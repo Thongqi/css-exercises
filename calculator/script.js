@@ -1,7 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
-   
+    var firstValue
+    var secValue
     
 
     buttons.forEach((button) => {
@@ -9,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
-            var firstValue
-            var secValue
+            
             var operator
             // if +-*/= is press, store the first string
             if (parseInt(value)){
