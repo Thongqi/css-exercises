@@ -34,9 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(firstValue)
                     var result = operation(firstValue, secValue, operator)
                     display(result)
-
-                    firstValue = ''
-                    secValue = ''
+                    console.log(result)
+                    firstValue = secValue = operator = ''
                 }
                 else{
                     //donothing
