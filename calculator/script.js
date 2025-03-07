@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 firstValue = result
                 result = ''
             }
+            else{
+                result = ''
+            }
 
             
 
