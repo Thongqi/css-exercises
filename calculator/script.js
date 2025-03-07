@@ -17,13 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 firstValue = secValue = operator = ''
             }
 
+            
             // after first operation, if number is clicked, clear all value
-            // if operator is clicked, store the result as firstvalue
-            if (result && !parseInt(value)){
+            // if operator is clicked, store the result as firstvalue       
+            if(result && !parseInt(value)){
+                operator = value
                 firstValue = result
-                result = ''
-            }
-            else{
                 result = ''
             }
 
@@ -54,7 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // clear stored value
                     firstValue = secValue = operator = ''
-                    operator = value
+
+                    // if equal is not pressed, but the other operatoe is pressed, 
+                    // store the value in operator      
+                    if(value != 'equal'){
+                        operator = value
+                        firstValue = result
+                        result = ''
+                    }
+
                 }
                 else{
                     //donothing
