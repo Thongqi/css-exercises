@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             }
             else{
-                if(!secValue){
+                if(!secValue && value != 'clear'){
                     operator = value
                     console.log(operator)
                 }
