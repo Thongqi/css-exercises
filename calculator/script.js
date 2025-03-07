@@ -1,3 +1,9 @@
+const oprArray = {
+    'plus':'+', 
+    'subtract':'-', 
+    'multiply':'×', 
+    'divide':'÷',
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     var buttons = document.querySelectorAll('button')
@@ -19,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             
             // after first operation, if number is clicked, clear all value
-            // if operator is clicked, store the result as firstvalue       
-            if(result && !parseInt(value)){
+            // if operator is clicked and is not 'clear', store the result as firstvalue       
+            if(result && !parseInt(value) && value != 'clear'){
                 operator = value
                 firstValue = result
                 result = ''
@@ -32,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
 
             // if +-*/= is press, store the first string
-            if (parseInt(value)){
+            if (parseInt(value) || value == '0'){
                 if (operator){
                     secValue = secValue? secValue + value: value
                 }
@@ -45,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             else{
                 if(!secValue && value != 'clear'){
-                    operator = value
+                    operator = oprArray[value]
                     console.log(operator)
                 }
                 else if (operator){
@@ -71,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            if(!result){
+            if(!result && value){
                 display(firstValue, operator, secValue)
             }
             
