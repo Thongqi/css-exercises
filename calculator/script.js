@@ -1,5 +1,5 @@
 const oprArray = {
-    'plus':'+', 
+    'add':'+', 
     'subtract':'-', 
     'multiply':'×', 
     'divide':'÷',
@@ -131,13 +131,13 @@ function operation(num1, num2, operator){
     num1 = parseInt(num1)
     num2 = parseInt(num2)
     switch (operator){
-        case 'add':
+        case '+':
             return add(num1, num2)
-        case 'subtract':
+        case '-':
             return subtract(num1, num2)
-        case 'multiply':
+        case '×':
             return multiply(num1, num2)
-        case 'divide':
+        case '÷':
             return divide(num1, num2)
     }
 }
