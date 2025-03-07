@@ -12,8 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
             var value = e.target.getAttribute('data-value')
             console.log(value)
             
+            // after first operation, if number is clicked, clear all value
+            // if operator is clicked, store the result as firstvalue
             if (result && !parseInt(value)){
                 firstValue = result
+                result = ''
+            }
+            else{
                 result = ''
             }
 
