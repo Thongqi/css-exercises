@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     //perform operation
                     console.log(firstValue)
                     result = operation(firstValue, secValue, operator)
-                    display(result.toFixed(3))
+                    display(parseFloat(result)? result.toFixed(3): result)
 
                     // clear stored value
                     firstValue = secValue = operator = ''

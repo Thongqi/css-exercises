@@ -7,6 +7,9 @@ body{
 
 h1{
     font-family: "Delius Swash Caps", cursive;
+    width: fit-content;
+    margin: auto;
+    font-size: 1.3rem;
 }
 .container {
     background-image: linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
@@ -20,7 +23,7 @@ h1{
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 10vw;
+    margin: 20px auto;
 }
 
 .number{
