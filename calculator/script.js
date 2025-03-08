@@ -50,10 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // if +-*/= is press, store the first string
             if (parseInt(value) || value == '0' || value == '.'){
                 if (operator){
-                    secValue = secValue? secValue + value: value
+                    if (!checkDot(secValue) && value == '.'){
+                        secValue = secValue? secValue + value: value
+                    }
+                    
                 }
                 else{
-                    firstValue = firstValue? firstValue + value: value
+                    if (!checkDot(firstValue) && value == '.'){
+                        firstValue = firstValue? firstValue + value: value
+                    }
                     console.log(firstValue, secValue)
                     
                 }
@@ -68,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     //perform operation
                     console.log(firstValue)
                     result = operation(firstValue, secValue, operator)
-                    display(result)
+                    display(result.toFixed(3))
 
                     // clear stored value
                     firstValue = secValue = operator = ''
@@ -168,7 +173,7 @@ function display(...array){
 
 function backspace(...array){ 
     // find the last element in array that is not undefined to delete
-    if (array.length >= 1){
+    if (array.findLastIndex((item) => item) != -1){
         var todelete = array.findLastIndex((item) => item)
         array[todelete] = array[todelete].slice(0, -1)
         return {
@@ -183,3 +188,10 @@ function backspace(...array){
 
 }
 
+function disableDot(){
+    document.querySelector('.dot').disabled = true
+}
+
+function checkDot(value){
+    return value.includes('.')
+}
