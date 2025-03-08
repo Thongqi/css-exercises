@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // after first operation, if number is clicked, clear all value
             // if operator is clicked and is not 'clear', store the result as firstvalue       
             if(result && !parseInt(value) && value != 'clear'){
-                operator = value
+                operator = oprArray[value]
                 firstValue = result
                 result = ''
             }
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // if equal is not pressed, but the other operatoe is pressed, 
                     // store the value in operator      
                     if(value != 'equal'){
-                        operator = value
+                        operator = oprArray[value]
                         firstValue = result
                         result = ''
                     }
