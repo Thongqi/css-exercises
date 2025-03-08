@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // if equal is not pressed, but the other operatoe is pressed, 
                     // store the value in operator      
-                    if(value != 'equal'){
+                    if(value != 'equal' && parseFloat(result)){
                         operator = oprArray[value]
                         firstValue = result
                         result = ''
