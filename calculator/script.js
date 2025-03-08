@@ -25,7 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //delete
             if(value == 'delete'){
-                delete(firstValue, operator, secValue)
+                var returnValue = delete(firstValue, operator, secValue)
+                firstValue = returnValue[0]
+                operator = returnValue[1]
+                secValue = returnValue[2]
+
             }
 
             
