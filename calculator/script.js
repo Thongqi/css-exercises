@@ -53,10 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     if ( value == '.' && secValue && !checkDot(secValue)){
                         secValue = secValue? secValue + value: value
                     }
+                    else if (value != '.'){
+                        secValue = secValue? secValue + value: value
+                    }
                     
                 }
                 else{
                     if (value == '.' && firstValue && !checkDot(firstValue)){
+                        firstValue = firstValue? firstValue + value: value
+                    }
+                    else if (value != '.'){
                         firstValue = firstValue? firstValue + value: value
                     }
                     console.log(firstValue, secValue)
