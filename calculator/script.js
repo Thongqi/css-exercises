@@ -168,13 +168,16 @@ function display(...array){
 
 function backspace(...array){ 
     // find the last element in array that is not undefined to delete
-    var todelete = array.findLastIndex((item) => item)
-    array[todelete] = array[todelete].slice(0, -1)
-    return {
+    if (array.length >= 1){
+        var todelete = array.findLastIndex((item) => item)
+        array[todelete] = array[todelete].slice(0, -1)
+        return {
         firstValue: array[0]?array[0]:'',
         operator: array[1]?array[1]:'',
         secValue: array[2]?array[2]:'',
     }
+    }
+    
     //if there is firstvalue, delete the last number and return as firstvalue
     //if there is secvalue, deleter the last number and return as secvalue
 
