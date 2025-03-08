@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // if +-*/= is press, store the first string
             if (parseInt(value) || value == '0' || value == '.'){
                 if (operator){
-                    if (!checkDot(secValue) && value == '.'){
+                    if ( value == '.' && secValue && !checkDot(secValue)){
                         secValue = secValue? secValue + value: value
                     }
                     
                 }
                 else{
-                    if (!checkDot(firstValue) && value == '.'){
+                    if (value == '.' && firstValue && !checkDot(firstValue)){
                         firstValue = firstValue? firstValue + value: value
                     }
                     console.log(firstValue, secValue)
