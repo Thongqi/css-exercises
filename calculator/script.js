@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // after first operation, if number is clicked, clear all value
             // if operator is clicked and is not 'clear', store the result as firstvalue       
-            if(result && !parseInt(value) && value != 'clear' && value != 'delete' && value != '.'){
+            if(parseFloat(result) && !parseInt(value) && value != 'clear' && value != 'delete' && value != '.'){
                 operator = oprArray[value]
                 firstValue = result
                 result = ''
