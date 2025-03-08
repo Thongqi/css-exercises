@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(315deg, #B3CEE5 0%, #91a3b0 74%);
+    background-image: linear-gradient(-315deg, #cddfee 0%, #91a3b0 74%);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -11,7 +11,9 @@ body{
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(6, auto);
     width: 20vw;
+    min-width: 200px;
     height: 20vw;
+    min-height: 250px;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -31,7 +33,6 @@ body{
 }
 
 .display{
-    box-shadow: inset 2px 2px 2px gray;
     grid-column: span 4;
     padding: 4px;
     text-align: right;
@@ -47,3 +48,6 @@ body{
     grid-column: 4/5;
 }
 
+.number{
+    background-color: rgba(217, 217, 217, 0.348);
+}

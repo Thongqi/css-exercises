@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // after first operation, if number is clicked, clear all value
             // if operator is clicked and is not 'clear', store the result as firstvalue       
-            if(result && !parseInt(value) && value != 'clear'){
+            if(result && !parseInt(value) && value != 'clear' && value != '.'){
                 operator = oprArray[value]
                 firstValue = result
                 result = ''
@@ -34,11 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             else{
                 result = ''
             }
-
+            
+            //delete
+            if(value == 'delete'){
+                delete(firstValue, operator, secValue)
+            }
             
 
             // if +-*/= is press, store the first string
-            if (parseInt(value) || value == '0'){
+            if (parseInt(value) || value == '0' || value == '.'){
                 if (operator){
                     secValue = secValue? secValue + value: value
                 }
@@ -156,7 +160,16 @@ function display(...array){
     
 }
 
-function getValue(e){
-    
+function delete(...array){ //[firstvalue, operator, secvalue]
+    var whichvalue = array.length
+    array[whichvalue] = array[whichvalue].slice(0, -1)
+    return {
+        firstValue: array[0],
+        operator: array[1]?array[1]:'',
+        secValue: array[2]?array[2]:'',
+    }
+    //if there is firstvalue, delete the last number and return as firstvalue
+    //if there is secvalue, deleter the last number and return as secvalue
+
 }
 
