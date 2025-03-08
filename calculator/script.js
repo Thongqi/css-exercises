@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     operator = oprArray[value]
                     console.log(operator)
                 }
-                else if (operator){
+                else if (operator && value != 'delete' && value != 'clear'){
                     //perform operation
                     console.log(firstValue)
                     result = operation(firstValue, secValue, operator)
@@ -138,8 +138,8 @@ function checkCase(value){
 }
 
 function operation(num1, num2, operator){
-    num1 = parseInt(num1)
-    num2 = parseInt(num2)
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
     switch (operator){
         case '+':
             return add(num1, num2)
