@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
             //delete
             if(value == 'delete'){
                 var returnValue = backspace(firstValue, operator, secValue)
-                firstValue = returnValue[0]
-                operator = returnValue[1]
-                secValue = returnValue[2]
+                firstValue = returnValue.firstValue
+                operator = returnValue.operator
+                secValue = returnValue.secValue
 
             }
 
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             }
             else{
-                if(!secValue && value != 'clear'){
+                if(!secValue && value != 'clear' && firstValue && value != 'delete'){
                     operator = oprArray[value]
                     console.log(operator)
                 }
