@@ -168,7 +168,7 @@ function display(...array){
 
 function backspace(...array){ 
     // find the last element in array that is not undefined to delete
-    var todelete = array.findLastIndex((item) => item != 'undefined')
+    var todelete = array.findLastIndex((item) => item)
     array[todelete] = array[todelete].slice(0, -1)
     return {
         firstValue: array[0]?array[0]:'',
